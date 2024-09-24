@@ -1,120 +1,103 @@
-.contact-page {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e1538;
+  padding: 15px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px; /* Adjusted height */
+}
+
+.logo {
+  color: #61dafb;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+/* Hover state */
+.nav-links a:hover {
+  color: #61dafb;
+}
+
+/* Active state for links */
+.nav-links a.active {
+  color: blue; /* Set active link color to blue */
+  font-weight: bold;
+}
+
+/* Mobile menu button */
+.mobile-menu-icon {
+  display: none;
+  color: white;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links-mobile {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Full viewport height */
-    background-color: #f0f0f0; /* Optional background color */
-  }
-  
-  .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 60px 40px; /* Increased padding-top to 60px */
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .contact-container h1 {
-    font-family: 'Gilroy', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .contact-container p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #666;
-  }
-  
-  .contact-form .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .contact-form label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Position below the navbar */
+    right: 0;
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+    background-color: #e9ecf1;
+    text-align: center;
+    z-index: 999;
+    max-height: 300px; /* Limit height */
+    overflow-y: auto; /* Allow scrolling */
   }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: #007bff; /* Blue border on focus */
+
+  .nav-links-mobile li {
+    margin: 15px 0;
   }
-  
-  .contact-form textarea {
-    height: 150px;
-    resize: none;
-  }
-  
-  .submit-btn {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Contact Information Styling */
-  .contact-info {
-    margin-top: 30px;
-    text-align: center; /* Align text to the center */
-  }
-  
-  .contact-info h2 {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-    color: #666;
-  }
-  
-  .contact-info a {
-    color: #007bff; /* Link color */
+
+  .nav-links-mobile a {
+    color: rgb(122, 123, 202); 
+    font-size: 20px;
+    transition: color 0.3s;
     text-decoration: none;
   }
-  
-  .contact-info a:hover {
-    text-decoration: underline; /* Underline on hover */
+
+  .nav-links-mobile a:hover {
+    color: #61dafb;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact-container {
-      padding: 20px;
-      width: 80%;
-      padding-top: 100px; /* Adjusting top padding for mobile */
-    }
-  
-    .contact-container h1 {
-      font-size: 1.5rem;
-    }
-  
-    .submit-btn {
-      width: 100%;
-    }
+
+  .mobile-menu-icon {
+    display: block; /* Show the mobile menu icon */
   }
-  
+}
