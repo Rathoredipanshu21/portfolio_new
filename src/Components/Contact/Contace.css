@@ -1,0 +1,120 @@
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Optional background color */
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 40px; /* Increased padding-top to 60px */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-container h1 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-container p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contact Information Styling */
+  .contact-info {
+    margin-top: 30px;
+    text-align: center; /* Align text to the center */
+  }
+  
+  .contact-info h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .contact-info a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+      width: 80%;
+      padding-top: 100px; /* Adjusting top padding for mobile */
+    }
+  
+    .contact-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .submit-btn {
+      width: 100%;
+    }
+  }
+  
