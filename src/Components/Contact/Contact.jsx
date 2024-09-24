@@ -29,6 +29,7 @@ const Contact = () => {
       <div className="contact-container">
         <h1>Contact Me</h1>
         <p>If you'd like to reach out, please fill out the form below!</p>
+        <p>Drop </p>
 
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
