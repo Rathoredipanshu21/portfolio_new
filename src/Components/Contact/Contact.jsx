@@ -74,6 +74,7 @@ const Contact = () => {
           <p>Email: <a href="mailto:rathoredipanshu21@gmail.com">rathoredipanshu21@gmail.com</a></p>
           <p>Phone: <a href="tel:+916201403690">+91 62014 03690</a></p>
           <p>Location: Dhanbad, Jharkhand</p>
+          <p>Location: Banka , Bihar </p>
         </div>
       </div>
 
