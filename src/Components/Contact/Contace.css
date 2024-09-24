@@ -1,103 +1,170 @@
+/* Contace.css */
+
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.navbar {
+
+/* Contact Container */
+.contact-container {
+  width: 40%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #4CAF50;
+  font-size: 2.5rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.contact-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0e1538;
-  padding: 15px;
-  font-family: 'Arial', sans-serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  height: 70px; /* Adjusted height */
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
 }
 
-.logo {
-  color: #61dafb;
-  font-size: 24px;
-}
-
-.nav-links {
+.form-group {
   display: flex;
-  list-style: none;
+  flex-direction: column;
 }
 
-.nav-links li {
-  margin: 0 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s;
-}
-
-/* Hover state */
-.nav-links a:hover {
-  color: #61dafb;
-}
-
-/* Active state for links */
-.nav-links a.active {
-  color: blue; /* Set active link color to blue */
+.form-group label {
+  margin-bottom: 8px;
+  color: #333;
   font-weight: bold;
 }
 
-/* Mobile menu button */
-.mobile-menu-icon {
-  display: none;
-  color: white;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #666;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons a:nth-child(1):hover {
+  color: #333; /* GitHub */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #0A66C2; /* LinkedIn */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #E1306C; /* Instagram */
+}
+
+.social-icons a:nth-child(4):hover {
+  color: #4267B2; /* Facebook */
+}
+
+.social-icons a:nth-child(5):hover {
+  color: #1DA1F2; /* Twitter */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px;
+    width: 80%;
   }
 
-  .nav-links-mobile {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px; /* Position below the navbar */
-    right: 0;
-    width: 100%;
-    background-color: #e9ecf1;
-    text-align: center;
-    z-index: 999;
-    max-height: 300px; /* Limit height */
-    overflow-y: auto; /* Allow scrolling */
+  h1 {
+    font-size: 2rem;
   }
 
-  .nav-links-mobile li {
-    margin: 15px 0;
+  .contact-info {
+    font-size: 0.9rem;
   }
 
-  .nav-links-mobile a {
-    color: rgb(122, 123, 202); 
-    font-size: 20px;
-    transition: color 0.3s;
-    text-decoration: none;
+  .social-icons a {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .submit-btn {
+    padding: 10px;
+    font-size: 1rem;
   }
 
-  .nav-links-mobile a:hover {
-    color: #61dafb;
-  }
-
-  .mobile-menu-icon {
-    display: block; /* Show the mobile menu icon */
+  .social-icons a {
+    font-size: 22px;
   }
 }
