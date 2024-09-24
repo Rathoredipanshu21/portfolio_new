@@ -17,7 +17,7 @@ const Projects = () => {
       description: 'Billion Software** allows businesses to create and manage bills with ease, track sales by day, week, or month, and search for specific items to view how much has been sold and the total revenue. It also enables bill printing and generates detailed reports to help businesses streamline sales and billing operations efficiently.',
       image: project1,
       github: 'https://github.com/Rathoredipanshu21/Resturant_bill_software',
-      demo: 'https://your-live-demo1.com', 
+      demo: '#', 
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const Projects = () => {
       description: 'Ruchika Saree is a comprehensive e-commerce platform built using the MERN stack. Users can easily browse and accept orders with full CRUD functionality for products. The site manages user details and order histories, ensuring a seamless shopping experience. With an intuitive interface, customers can explore a wide range of sarees, making it a go-to destination for online saree shopping.',
       video: videoFile,
       github: 'https://github.com/Rathoredipanshu21/Ruchika_backend',
-      demo: '',
+      demo: '#',
     },
     {
       id: 4,
