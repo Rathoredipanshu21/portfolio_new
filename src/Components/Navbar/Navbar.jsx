@@ -31,7 +31,7 @@ const Navbar = () => {
           </a>
         </li>
         <li className={active === "contact" ? "active" : ""}>
-          <a href="/contact" onClick={() => handleClick("contact")}>
+          <a href="/" onClick={() => handleClick("contact")}>
             <FaEnvelope /> Contact
           </a>
         </li>
