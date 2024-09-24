@@ -9,7 +9,7 @@ import samplePDF from '../Assets/resume_dip.pdf';
 
 const titles = [
   "Full Stack Developer",
-  "React Native Developer",
+  // "React Native Developer",
   "Frontend Developer",
   "Backend Developer",
   "PHP Developer",
