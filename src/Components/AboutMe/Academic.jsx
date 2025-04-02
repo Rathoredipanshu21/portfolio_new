@@ -8,30 +8,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Academic = () => {
-    // Uncomment if using animations
-    // useEffect(() => {
-    //     const elements = gsap.utils.toArray('.left-content');
-    //     gsap.from(elements, {
-    //         opacity: 0,
-    //         y: 50,
-    //         duration: 0.5,
-    //         stagger: 0.2,
-    //         scrollTrigger: {
-    //             trigger: '.aboutMe',
-    //             start: 'top 75%',
-    //             toggleActions: 'play none none reverse',
-    //             once: true,
-    //         },
-    //     });
-    //     return () => {
-    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    //     };
-    // }, []);
+  
 
     return (
         <div className="aboutMe">
-            <div className="aboutMe-left">
-                {/* <h1 className="title">LET ME <span style={{ color: 'yellow' }}>INTRODUCE</span> MYSELF</h1> */}
+            <div className="aboutMe-left" data-aos="zoom-in-right">
+               
                 
                 <div className="section">
                     <h2 className="title" style={{textAlign:'center'}}>  <span style={{ color: 'yellow' }}>Academic </span>Qualifications</h2>
@@ -39,13 +21,13 @@ const Academic = () => {
                     {/* <div className="custom-break"></div>  */}
 
 
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="zoom-out-up">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🎓 Currently pursuing an MSc in Computer Science from BBMKU University, Dhanbad, Jharkhand (2023-2025).</span>
                         </span>
                     </h3>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="zoom-out-right">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🏆 Completed my Bachelor's degree with a CGPA of 6.86 from PK Roy Memorial College, Dhanbad in 2023.</span>
@@ -65,33 +47,33 @@ const Academic = () => {
                     </h3>
                 </div>
 
-                <div className="section">
+                <div className="section" data-aos="flip-left">
                     <h2 className="title" style={{textAlign:'center'}}>S<span style={{color:'yellow'}}>ki</span>lls</h2>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="flip-left">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🚀 Knowledge of Programming Languages : <strong>PHP, JavaScript, Java</strong></span>
                         </span>
                     </h3>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="flip-up">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🌐 Proficient in Frontend Technologies : <strong>HTML, CSS, JavaScript, React.js, React Native, Bootstrap</strong></span>
                         </span>
                     </h3>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="zoom-in">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🔙 Backend Development Skills : <strong>PHP, Node.js, Express.js</strong></span>
                         </span>
                     </h3>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="zoom-in-down">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>💾 Database Management Expertise : <strong>MySQL, MongoDB</strong></span>
                         </span>
                     </h3>
-                    <h3 className='left-content'>
+                    <h3 className='left-content' data-aos="flip-left">
                         <span className="icon-text">
                             <FontAwesomeIcon icon={faStar} className="star-icon" />
                             <span>🛠️ Tools & Other Technologies : <strong>GitHub, MS Office, GSAP ScrollTrigger, Locomotive</strong></span>

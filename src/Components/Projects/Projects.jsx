@@ -1,6 +1,6 @@
-
-
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Projects.css'; 
 import project1 from "../Assets/project1.jpg"; 
 import project2 from "../Assets/dance_php.jpg";
@@ -8,9 +8,40 @@ import project4 from "../Assets/school_site.jpg";
 import project5 from "../Assets/byte.jpg";
 import project6 from "../Assets/photo-studio.jpg";
 import videoFile from "../Assets/Ruchika_saree.mp4";
+import bhoj1 from '../Assets/bhoj1.png'
+import adm from '../Assets/adm.png'
+import sch from '../Assets/sch.png'
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+  }, []);
+
   const projectsData = [
+    {
+      id: 1,
+      name: 'School management ',
+      description: 'I am currently developing a School Management Software tailored for small schools. It includes staff management (teachers), student management, and a master admin panel for complete control. Designed for simplicity and efficiency, this system streamlines operations, ensuring smooth school administration with ease. Excited to bring this project to life! 🚀',
+      image: sch,
+      github: '',
+      demo: '', 
+    },
+    {
+      id: 1,
+      name: 'Admission Consler',
+      description: 'Simplifying admissions with our Admission Consultancy Software! 🚀 From student admissions to fee management, staff oversight, college fee tracking, and vendor management—everything is seamlessly handled in one platform. Designed for efficiency and accuracy, it streamlines operations, making management effortless and organized. Empower your consultancy with smart automation! 🎓✨',
+      image: adm,
+      github: '',
+      demo: 'http://software.jewt.in/', 
+    },
+    {
+      id: 1,
+      name: ' BHOJANAM- Restaurant Billing Software',
+      description: 'Bhojanam is a user-friendly restaurant billing software designed for efficiency. It features quick item search, an admin panel for stock management, bill tracking, and seamless order handling. With an intuitive interface, it simplifies operations, reduces errors, and enhances productivity, making restaurant management smoother and more efficient. 🚀',
+      image: bhoj1,
+      github: '',
+      demo: 'http://bhojanam.systaio.com/', 
+    },
     {
       id: 1,
       name: 'Billing-Software',
@@ -67,7 +98,11 @@ const Projects = () => {
       <h3 id='h1'>Here are a few <span style={{color:'yellow'}}> projects</span> I've worked on recently</h3>
       <div className="projects-container">
         {projectsData.map(project => (
-          <div key={project.id} className="project-card">
+          <div
+            key={project.id}
+            className="project-card"
+            data-aos="zoom-in-down" // Add AOS animation
+          >
             {project.image ? (
               <img src={project.image} alt={project.name} />
             ) : (
@@ -77,7 +112,7 @@ const Projects = () => {
               </video>
             )}
             <h3>{project.name}</h3>
-            <p style={{color:'#fff'}}>{project.description}</p>
+            <p style={{ color: '#fff' }}>{project.description}</p>
             <div className="button-container">
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="button">GitHub</a>
               <a href={project.demo} target="_blank" rel="noopener noreferrer" className="button">Live Demo</a>

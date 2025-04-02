@@ -12,7 +12,7 @@ const Footer = () => {
             </div> */}
            
             <div class="footer-copy">
-                <p>&copy; 2024 Dipanshu Singh. All rights reserved.</p>
+                <p>&copy; 2025 Dipanshu Singh. All rights reserved.</p>
             </div>
         </div>
     </footer>

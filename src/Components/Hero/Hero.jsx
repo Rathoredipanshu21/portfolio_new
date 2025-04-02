@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Hero.css";
 import pp from "../Assets/profile_pic.jpg";
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import samplePDF from '../Assets/resume_dip.pdf';
-
+import samplePDF from '../Assets/Dip_res_updated.pdf';
 
 const titles = [
   "Full Stack Developer",
-  // "React Native Developer",
+  "MERN Developer",
   "Frontend Developer",
   "Backend Developer",
   "PHP Developer",
@@ -19,6 +20,7 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1 second
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % titles.length);
     }, 2000); // Change title every 2 seconds
@@ -28,7 +30,8 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero-content">
+      
+      <div className="hero-content" data-aos="fade-right">
         <h1>Hello there....</h1>
         <h2>
           Welcome to the Portfolio of <span className="highlighted"><span style={{color:'yellow'}}>DIPANSHU SINGH</span></span>
@@ -48,54 +51,44 @@ const Hero = () => {
         <br />
         <br />
 
-        <div className="social-icons">
-            <a href="https://github.com/Rathoredipanshu21" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} className="social-icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/dipanshu-rathore-3549672a8/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
-            </a>
-            <a href="https://www.instagram.com/r.a.t.h.o.r.e21/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-            </a>
-            <a href="https://www.facebook.com/dipanshu.rathore.589/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-            </a>
-            <a href="https://x.com/rathore7482" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-            </a>
-          </div>
-
-          <div className="resume-container" style={{ marginTop: '20px' }}>
-  {/* Button to download PDF */}
-  <a href={samplePDF} download="My_Resume.pdf">
-    <button
-      style={{
-        backgroundColor: 'yellow', // Changed to yellow
-        color: 'black', // Adjusted text color for contrast
-        padding: '10px 20px',
-        fontSize: '1em',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer'
-      }}
-    >
-      Download CV
-    </button>
-  </a>
-</div>
-
-
-
-        <div className="contact-section">
-          
-         <br />
-        
+        <div className="social-icons" data-aos="zoom-in">
+          <a href="https://github.com/Rathoredipanshu21" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} className="social-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/dipanshu-rathore-3549672a8/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+          </a>
+          <a href="https://www.instagram.com/r.a.t.h.o.r.e21/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+          </a>
+          <a href="https://www.facebook.com/dipanshu.rathore.589/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+          </a>
+          <a href="https://x.com/rathore7482" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+          </a>
         </div>
-        
+
+        <div className="resume-container" style={{ marginTop: '20px' }} data-aos="fade-up">
+          <a href={samplePDF} download="My_Resume.pdf">
+            <button
+              style={{
+                backgroundColor: 'yellow',
+                color: 'black',
+                padding: '10px 20px',
+                fontSize: '1em',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer'
+              }}
+            >
+              Download CV
+            </button>
+          </a>
+        </div>
       </div>
       
-      <div className="hero-image">
+      <div className="hero-image" data-aos="fade-left">
         <img src={pp} alt="Dipanshu Singh" />
       </div>
     </section>

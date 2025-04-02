@@ -3,7 +3,8 @@
     max-width: 1600px;
     margin: 0 auto;
     padding: 40px;
-    background-color: #f1efef;
+    /* background-color: #f1efef; */
+    color: #fff;
     text-align: center;
     padding-top: 50px;
     font-family: gilory;

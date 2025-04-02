@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Travel.css'; 
+import TravelHero from './TravelHero'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import taj_01 from '../Assets/taj_01.jpg'
 import taj_02 from '../Assets/taj_02.jpg'
 import taj_03 from '../Assets/taj_03.jpg'
@@ -17,7 +21,7 @@ import vai_04 from "../Assets/vai_04.jpg";
 
 import dig_01 from "../Assets/dig_01.jpg";
 import dig_02 from "../Assets/dig_02.jpg";
-import dig_03 from "../Assets/dig_03.jpg";
+import dig_03 from "../Assets/mand4.jpg";
 import dig_04 from "../Assets/dig_04.jpg";
 
 import dl_01 from '../Assets/dl_01.jpg';
@@ -63,9 +67,25 @@ import gan_03 from "../Assets/gan_03.jpg";
 import gan_04 from "../Assets/gan_04.jpg";
 
 
+import pur1 from '../Assets/pur1.jpg'
+import pur2 from '../Assets/pur2.jpg'
+import pur3 from '../Assets/pur3.jpg'
+import pur4 from '../Assets/pur4.jpg'
+
+
+import dig1 from '../Assets/dig1.jpg'
+import dig2 from '../Assets/dig2.jpg'
+import dig3 from '../Assets/dig3.jpg'
+import dig4 from '../Assets/dig4.jpg'
+
+
 
 
 const Travel = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+  }, []);
+
   const travelPlaces = [
     {
       title: "Taj-Mahal Agra",
@@ -99,7 +119,7 @@ const Travel = () => {
       description: "I visited Mata Vaishno Devi on November 26, 2021, and felt a deep connection with the divine. The journey was filled with new experiences, meeting people from all walks of life. The scenic beauty and vibrant energy of the place made it an unforgettable and spiritually uplifting experience."
     },
     {
-        title: "Digha Sea Beach , West Bangal",
+        title: "Mandar Mani Beach , West Bangal",
         images: [
           dig_01,
          dig_02,
@@ -164,6 +184,21 @@ const Travel = () => {
         ],
         description: " Visited Vrindavan and Mathura for the first time on July 2, 2023. Exploring the enchanting stories of Krishna—from his birth to the Rasleela—was magical. I visited iconic sites like Nidhivan, ISKCON Temple, Prem Mandir, and Krishna Janmabhoomi, all of which preserved the divine atmosphere of this sacred land."
       },
+
+    {
+        title: "Puri ,Odisha",
+        images: [
+
+           pur1,
+           pur2,
+           pur3,
+           pur4
+
+        
+           
+        ],
+        description: "On December 19, 2023, I visited Puri and Bhubaneswar in Odisha and had an amazing experience. I explored the famous Jagannath Temple and Lingaraj Temple, admiring their stunning architecture. The highlight was Golden Beach in Puri, where I enjoyed the serene waves and beautiful sunset, making unforgettable memories."
+      },
     {
         title: "Manali , Himachal  ",
         images: [
@@ -206,16 +241,33 @@ const Travel = () => {
         ],
         description: "Visited Gangtok, Sikkim, on 2nd Sept 2024 a beautiful destination full of new experiences. Exploring Nathula Pass at 14,000 feet, I witnessed rapid weather changes and breathtaking views of Kanchanjunga. The cold was intense, but the stunning scenery and vibrant atmosphere of MG Road made it an unforgettable adventure in this enchanting region."
       },
+    {
+        title: "Digha Sea Beach , West Bangal ",
+        images: [
+
+       dig1,
+       dig2,
+       dig4,
+       dig3,
+
+        
+           
+        ],
+        description: "On January 3, 2025, I visited Digha Sea Beach, Odisha, with friends and had an unforgettable adventure. The highlight was the thrilling banana ride, where we truly felt the rush of life and death. We also enjoyed boating and had endless fun, making it my best adventure memory yet!"
+      },
 
   ];
 
   return (
+
+    <>
+    <TravelHero/>
     <div className="travel-container">
-      <h1 className="page-title">Explore Stunning Destinations</h1>
-      <p style={{color:'#000',padding:'10px'}}>Travel is an essential aspect of human life, offering invaluable opportunities for growth and learning. Exploring new places allows individuals to experience diverse cultures, interact with different people, and discover unique perspectives. Each journey presents a chance to step outside one’s comfort zone, fostering personal development and self-reflection. Through travel, one can learn humility and appreciation for nature’s beauty, which often inspires a shift in mindset. Encountering new landscapes and traditions can lead to profound realizations, helping individuals shed their ego and embrace change. Ultimately, travel enriches our lives with unforgettable experiences and shapes us into more open-minded individuals.</p>
+      <h1 className="page-title" style={{color:'yellow'}}>Explore Stunning <span style={{color:'green'}}>Destinations</span></h1>
+      <p style={{color:'#fff',padding:'10px'}}>Travel is an essential aspect of human life, offering invaluable opportunities for growth and learning. Exploring new places allows individuals to experience diverse cultures, interact with different people, and discover unique perspectives. Each journey presents a chance to step outside one’s comfort zone, fostering personal development and self-reflection. Through travel, one can learn humility and appreciation for nature’s beauty, which often inspires a shift in mindset. Encountering new landscapes and traditions can lead to profound realizations, helping individuals shed their ego and embrace change. Ultimately, travel enriches our lives with unforgettable experiences and shapes us into more open-minded individuals.</p>
       <div className="travel-grid">
         {travelPlaces.map((place, index) => (
-          <div key={index} className="place-card">
+          <div key={index} className="place-card" data-aos="zoom-in">
             <h2 className="place-title">{place.title}</h2>
             <div className="image-grid">
               {place.images.map((imgSrc, idx) => (
@@ -227,6 +279,7 @@ const Travel = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
