@@ -1,138 +1,74 @@
-import React, { useState } from 'react';
-import './Contace.css'
+import React from 'react';
+import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Message sent by ${formData.name}`);
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
-    <>
-      <div className="contact-container">
-        <h1>Contact Me</h1>
-        <p>If you'd like to reach out, please fill out the form below!</p>
+    <div className="enquiry-container">
+      <header className="enquiry-header">
+        {/* You can add a header image or title here */}
+      </header>
 
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+      <div className="enquiry-content">
+        <div className="enquiry-info">
+          <h2>Get in Touch</h2>
+          <p>
+            We are here to assist you with any questions or concerns you may have.
+            Please fill out the form and we will get back to you as soon as possible.
+          </p>
+          <p>You can also reach us through our social media channels:</p>
+
+          <div className="social-media">
+            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="https://instagram.com/r.a.t.h.o.r.e21" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+            <a href="https://www.linkedin.com/in/dipanshu-singh-3549672a8/" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" className="submit-btn">Send Message</button>
-        </form>
-
-        <div className="contact-info">
-          <h2>Contact Information</h2>
-          <p>Email: <a href="mailto:rathoredipanshu21@gmail.com">rathoredipanshu21@gmail.com</a></p>
-          <p>Phone: <a href="tel:+916201403690">+91 62014 03690</a></p>
-          <p>Location: Dhanbad, Jharkhand</p>
+          <aside className="enquiry-sidebar" style={{ marginTop: '75px' }}>
+            <h2>Contact Information</h2>
+            <p><FontAwesomeIcon icon={faPhone} /> +91-6201403690</p>
+            <p><FontAwesomeIcon icon={faEnvelope} />rathoredipanshu21@gmail.com</p>
+            <p><FontAwesomeIcon icon={faMapMarkerAlt} />Dhanbad , Jharkhand</p>
+          </aside>
         </div>
+
+        <form className="enquiry-form">
+          <h2>Contact Form</h2>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="enquiry">Enquiry:</label>
+            <textarea id="enquiry" name="enquiry" rows="4" required></textarea>
+          </div>
+          <button type="submit" className="submit-button">Submit</button>
+        </form>
       </div>
-
-      <div 
-        className="social-icons" 
-        style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '20px', 
-          marginTop: '20px' 
-        }}
-      >
-        <a 
-          href="https://github.com/Rathoredipanshu21" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ fontSize: '24px', color: '#333' }}
-        >
-          <FontAwesomeIcon icon={faGithub} className="social-icon" />
-        </a>
-
-        <a 
-          href="https://www.linkedin.com/in/dipanshu-rathore-3549672a8/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ fontSize: '24px', color: '#0A66C2' }}
-        >
-          <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
-        </a>
-
-        <a 
-          href="https://www.instagram.com/r.a.t.h.o.r.e21/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ fontSize: '24px', color: '#E1306C' }}
-        >
-          <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-        </a>
-
-        <a 
-          href="https://www.facebook.com/dipanshu.rathore.589/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ fontSize: '24px', color: '#4267B2' }}
-        >
-          <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-        </a>
-
-        <a 
-          href="https://x.com/rathore7482" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ fontSize: '24px', color: '#1DA1F2' }}
-        >
-          <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-        </a>
-      </div>
-    </>
+    </div>
   );
-};
+}
 
 export default Contact;
