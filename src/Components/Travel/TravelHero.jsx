@@ -8,7 +8,9 @@ const TravelHero = () => {
   return (
     <div className="hero-container">
       <section className="travel-hero">
-        <div className="text-content">
+      <div class='at-container'>
+	<div class='at-item' >
+  <div className="text-content">
           <h1 className="title">
             <FontAwesomeIcon icon={faGlobe} className="icon" /> Wonder <span style={{color:'green'}}>lust</span>
           </h1>
@@ -19,6 +21,10 @@ const TravelHero = () => {
             <FontAwesomeIcon icon={faCompass} className="icon" /> Join me on an incredible journey to explore the beauty of this world, one adventure at a time.
           </p>
         </div>
+  </div>
+</div>
+
+       
         <img src={explore} alt="Travel Adventure" className="hero-image" />
       </section>
     </div>

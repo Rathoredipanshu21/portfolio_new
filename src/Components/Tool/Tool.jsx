@@ -1,7 +1,8 @@
 import React from 'react';
 import './Tool.css';
 import { FaWindows, FaAndroid, FaServer } from 'react-icons/fa';
-import { SiVisualstudiocode, SiPostman } from 'react-icons/si';
+import { SiVisualstudiocode } from 'react-icons/si';
+import { SiCanva } from 'react-icons/si'; // Updated import
 
 const Tools = () => {
     return (
@@ -25,8 +26,8 @@ const Tools = () => {
                     {/* <p>Android Studio</p> */}
                 </div>
                 <div className="tool-item">
-                    <SiPostman />
-                    {/* <p>Postman</p> */}
+                    <SiCanva /> {/* Updated icon */}
+                    {/* <p>Canva</p> */} {/* Updated label */}
                 </div>
             </div>
         </div>
